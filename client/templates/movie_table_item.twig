@@ -1,0 +1,63 @@
+{% extends 'base.twig' %}
+{% block title %}Movie App Home
+{% endblock %}
+{% block brand %}Movie App Home
+{% endblock %}
+{% block body %}
+	<div class="container">
+		<div class="row">
+			<div class="col-md-1"></div>
+			<div class="col-md-10 box-red text-center">Movie Table</div>
+			<div class="col-md-1"></div>
+		</div>
+		<div class="row">
+			<div class="col-md-1"></div>
+			<div class="col-md-10 jumbotron text-center">
+				{% block record %}
+					<div class="row">
+						<div class="col-md-3 text-left">
+							<h3>Title:</h3>
+							<span>{{ record.title }}</p>
+							<h3>Release Date:</h3>
+							<span>{{ record.release_date }}</span>
+							<h3>Genre:</h3>
+							<span>
+								{% set genres = record.genre|split("/") %}
+								{% for genre in genres %}
+									{{ genre }}
+								{% endfor %}
+							</span>
+							<h3>Length:</h3>
+							<span>{{ record.length }}
+								minutes</span>
+							<h3>Director:</h3>
+							<span>{{ record.director }}</span>
+							<h3>Lead Actor:</h3>
+							<span>{{ record.lead_actor }}</span>
+							<h3>filename:</h3>
+							<span>{{ record.filename }}</span>
+						</div>
+						<div class="col-md-3 btn-group">
+							<button type="button" class="btn btn-height-50-100 btn-rounded-top-right btn-primary btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Edit
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu" data-edit="edit">
+								<li class="btn-success btn-rounded-top-right">
+									<a href="./?action=viewMovies&id={{ record.id }}&update=true">Update</a>
+								</li>
+								<li role="separator" class="divider"></li>
+								<li class="btn-danger btn-rounded-top-right">
+									<a href="./?action=viewMovies&id={{ record.id }}&delete=true">Delete</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-md-6 text-left">
+							<img class="movie-record-img-large" src="./static/assets/posters/{{ record.filename }}" alt="{{ record.filename }}"/>
+						</div>
+					</div>
+				{% endblock %}
+			</div>
+		</div>
+	</div>
+{% endblock %}

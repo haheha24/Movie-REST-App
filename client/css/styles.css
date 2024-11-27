@@ -1,0 +1,150 @@
+/* Generic */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+#main {
+  height: calc(min(100%, 100vh));
+  position: relative;
+}
+.bg-custom {
+  background-color: rgba(183, 51, 80, 0.7);
+}
+.bg-row-1 {
+  background-color: #b4b4b4;
+}
+.bg-row-2 {
+  background-color: #e9ecef;
+}
+a.bg-custom:hover,
+a.bg-custom:focus,
+button.bg-custom:hover,
+button.bg-custom:focus {
+  background-color: #1d2124 !important;
+}
+.box-red {
+  background-color: rgba(183, 51, 80, 0.7);
+  color: white;
+  font-size: 3em;
+}
+.box-black {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  font-size: 3em;
+}
+.rounded-10 {
+  border-radius: 10px;
+}
+.width {
+  width: 100%;
+}
+.btn-red {
+  border-radius: 0;
+  color: #fff;
+  background-color: rgba(183, 51, 80, 0.7);
+}
+.btn-red:hover,
+.btn-red:focus,
+.btn-red:active {
+  color: #000;
+  background-color: rgb(143, 16, 43);
+}
+
+.btn-height-50-100 {
+  min-height: 50px;
+  height: min-content;
+  max-height: 100px;
+}
+
+.btn-rounded-top-right {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* Header */
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 1);
+}
+
+/* Body */
+body {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+  background-color: #000000;
+}
+.container {
+  margin-top: 60px;
+}
+.movie-record {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+a div.movie-record,
+a img.movie-record {
+  padding: 3px;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.movie-record-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+}
+.movie-record-img-large {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1.5;
+  object-fit: cover;
+}
+.btn-delete {
+  margin: 0 auto;
+  width: 100%;
+}
+.btn-delete-danger {
+  margin: 0 auto;
+  width: 50%;
+}
+
+/* Footer */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 7%;
+  background-color: rgba(183, 51, 80, 0.7);
+  color: white;
+  text-align: center;
+}
+
+/***********************/
+/* bootstrap overwrites */
+/***********************/
+ul[data-edit="edit"].dropdown-menu {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+}
+ul[data-edit="edit"].dropdown-menu li {
+  width: inherit;
+  padding-left: 10px;
+  cursor: pointer;
+}
+ul[data-edit="edit"].dropdown-menu li a {
+  color: #fff;
+  display: block;
+  width: inherit;
+  padding: 3px 0;
+  text-decoration: none;
+}
+ul[data-edit="edit"].dropdown-menu li a:hover,
+ul[data-edit="edit"].dropdown-menu li a:active,
+ul[data-edit="edit"].dropdown-menu li a:focus {
+  color: #000;
+}

@@ -1,0 +1,22 @@
+{% extends 'base_form.twig' %}
+{% block form_title %}Movie Delete Form
+{% endblock %}
+{% block form %}
+	<form class="form-horizontal text-center" action="" method="post">
+		<h1>Are you sure?</h1>
+		<p class="text-muted">This is permanent</p>
+		<div class="form-group">
+			<input type="hidden" name="id" value="{{ id }}">
+			<div class="container">
+				<button type="submit" name="submit" class="btn btn-height-50-100 btn-rounded-top-right btn-danger btn-lg btn-delete-danger">
+					Delete
+				</button>
+			</div>
+			{% block id %}
+				<div class="container">
+					<a href="./?action=viewMovies&id={{ id }}" class="btn btn-rounded-top-right btn-warning btn-lg btn-delete" role="button">Cancel</a>
+				</div>
+			{% endblock %}
+		</div>
+	</form>
+{% endblock %}

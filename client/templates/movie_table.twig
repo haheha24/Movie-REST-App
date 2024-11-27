@@ -1,0 +1,41 @@
+{% extends 'base.twig' %}
+{% block title %}Movie App Home
+{% endblock %}
+{% block brand %}Movie App Home
+{% endblock %}
+{% block body %}
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 box-red text-center">Movie Table</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12 jumbotron bg-transparent text-center">
+				{% for row in records %}
+					<div class="row bg-row-1">
+						<div class="col-md-2 movie-record">Title</div>
+						<div class="col-md-1 movie-record">Release Date</div>
+						<div class="col-md-2 movie-record">Genre</div>
+						<div class="col-md-1 movie-record">Length</div>
+						<div class="col-md-2 movie-record">Director</div>
+						<div class="col-md-2 movie-record">Lead Actor</div>
+						<div class="col-md-2 movie-record">Movie Image / Filename</div>
+					</div>
+					<a href="./?action=viewMovies&id={{ row.id }}" class="row bg-row-2" data-row="table">
+						<div class="col-md-2 movie-record">{{ row.title }}</div>
+						<div class="col-md-1 movie-record">{{ row.release_date }}</div>
+						<div class="col-md-2 movie-record">
+							{% set genres = row.genre|split("/") %}
+							{% for genre in genres %}
+								{{ genre }}
+							{% endfor %}
+						</div>
+						<div class="col-md-1 movie-record">{{ row.length }}</div>
+						<div class="col-md-2 movie-record">{{ row.director }}</div>
+						<div class="col-md-2 movie-record">{{ row.lead_actor }}</div>
+						<img class="col-md-2 movie-record movie-record-img" src="./static/assets/posters/{{ row.filename }}" alt="{{ row.filename }}"/>
+					</a>
+				{% endfor %}
+			</div>
+		</div>
+	</td>
+</tr></div>{% endblock %}

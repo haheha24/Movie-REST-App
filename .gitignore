@@ -1,6 +1,21 @@
 composer.phar
-/vendor/
+vendor
+*.env
+errors.log
 
-# Commit your application's lock file https://getcomposer.org/doc/01-basic-usage.md#commit-your-composer-lock-file-to-version-control
-# You may choose to ignore a library lock file http://getcomposer.org/doc/02-libraries.md#lock-file
-# composer.lock
+
+# No need to store all files, just the example set.
+client/static/assets/posters/*.*
+!backtothefuture.jpg
+!bohemianrhapsody.jpg
+!endgame.jpg
+!greenbook.jpg
+!music1.jpg
+!infinitywar.jpg
+!lalaland.jpg
+!moonlight.jpg
+!prisoners.jpg
+!pulpfiction.jpg
+!spiderman2.jpg
+!titanic.jpg
+

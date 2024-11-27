@@ -1,0 +1,39 @@
+{% extends 'base_form.twig' %}
+{% block form_title %}Movie Add Form
+{% endblock %}
+{% block form %}
+	<form class="form-horizontal" action="" method="post" enctype="multipart/form-data" novalidate>
+		<div class="form-group">
+			<label class="control-label">Title:</label>
+			<input class="form-control" type="text" name="title" maxlength="30"/>
+		</div>
+		<div class="form-group">
+			<label class="control-label">Release Date:</label>
+			<input class="form-control" type="text" name="release_date" pattern="\d{4}-\d{2}-\d{2}" placeholder="YYYY-MM-DD"/>
+		</div>
+		<div class="form-group">
+			<label class="control-label">Genre:</label>
+			<input class="form-control" type="text" name="genre" maxlength="30"/>
+		</div>
+		<div class="form-group">
+			<label class="control-label">Length:</label>
+			<input class="form-control" type="text" name="length" maxlength="3"/>
+		</div>
+		<div class="form-group">
+			<label class="control-label">Director:</label>
+			<input class="form-control" type="text" name="director" maxlength="30"/>
+		</div>
+		<div class="form-group">
+			<label class="control-label">Lead Actor:</label>
+			<input class="form-control" type="text" name="lead_actor" maxlength="30"/>
+		</div>
+		<div class="form-group">
+			<label class="control-label">Movie Image:</label>
+			<input class="form-control" type="file" name="filename" maxlength="30"/>
+		</div>
+		<div class="form-group">
+			<button class="btn btn-red btn-block" type="submit" name="submit" value="submit">Submit</button>
+		</div>
+
+	</form>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.twig' %}
+{% block title %}Movie App Home
+{% endblock %}
+{% block brand %}Movie App Home
+{% endblock %}
+{% block body %}
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3"></div>
+			<div class="col-md-6 box-red text-center">
+				{% block form_title %}{% endblock %}
+			</div>
+			<div class="col-md-3"></div>
+		</div>
+		<div class="row">
+			<div class="col-md-3"></div>
+			<div class="col-md-6 jumbotron text-left">
+				{% block form %}{% endblock %}
+			</div>
+			<div class="col-md-3"></div>
+		</div>
+	</div>
+{% endblock %}
