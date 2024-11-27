@@ -23,7 +23,7 @@
         - DB_NAME=emoviesdb
         - DB_USER=root
         - DB_PASS=''
-- You will need to adjust the variables .env files depending on your setup if necessary.
+- You will need to adjust the variables in the .env files depending on your setup if necessary.
 
 ## To do
 - Add client side and server side validation
